@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-
 let notes = [
   {
     id: 1,
@@ -23,6 +22,7 @@ let notes = [
   },
 ];
 
+app.use(express.static('../build'));
 app.use(express.json());
 app.use(cors());
 
