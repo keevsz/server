@@ -26,10 +26,6 @@ app.use(express.static('../build'));
 app.use(express.json());
 app.use(cors());
 
-app.get('/', (req, res) => {
-  res.send('<div>hello world</div>');
-});
-
 app.get('/api/notes', (req, res) => {
   res.json(notes);
 });
